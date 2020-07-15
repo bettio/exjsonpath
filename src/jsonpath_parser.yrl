@@ -37,6 +37,7 @@ child -> '.' '*' : [wildcard].
 child -> '.' identifier : [{access, extract_token('$2')}].
 child -> '.' integer : [{access, extract_token('$2')}].
 child -> '[' index ']' : ['$2'].
+child -> '[' '*' ']' : [wildcard].
 child -> '[' union ']' : ['$2'].
 
 union -> indexes: {union,  '$1'}.
